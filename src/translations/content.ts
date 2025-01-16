@@ -1,9 +1,10 @@
 export const content = {
   id: {
     hero: {
-      title: "PT. ARGA TEKNOLOGI HANDAL",
-      description: "Kami adalah pemimpin di industri konstruksi dan teknologi informasi, berkomitmen untuk memberikan solusi terbaik bagi kebutuhan klien kami. Dengan pengalaman yang luas di berbagai bidang, kami siap membantu Anda mencapai tujuan proyek Anda.",
-      cta: "Hubungi Kami"
+      badge: "Mari Membangun Masa Depan Bersama!",
+      title: "Mewujudkan Visi Anda dengan Solusi Teknologi Terpercaya",
+      description: "Di PT. ARGA TEKNOLOGI HANDAL, kami mengubah ide menjadi kenyataan melalui layanan konstruksi dan teknologi yang inovatif. Dengan komitmen terhadap keunggulan dan semangat untuk kualitas, kami memberikan solusi yang disesuaikan dengan kebutuhan unik Anda.",
+      cta: "Hubungi Kami",
     },
     about: {
       title: "Visi & Misi",
@@ -62,13 +63,34 @@ export const content = {
           location: "Jakarta Selatan dan sekitarnya"
         }
       ]
+    },
+    floating: {
+      contactUs: "Kontak Kami",
+      specialMessage: "Pesan Khusus",
+      form: {
+        title: "Formulir Pesan Khusus",
+        name: "Nama",
+        namePlaceholder: "Masukkan nama Anda",
+        email: "Email",
+        emailPlaceholder: "Masukkan email Anda",
+        message: "Pesan",
+        messagePlaceholder: "Tuliskan pesan Anda",
+        submit: "Kirim via WhatsApp"
+      }
+    },
+    navbar: {
+      home: "Beranda",
+      about: "Tentang",
+      services: "Layanan",
+      contact: "Kontak"
     }
   },
   en: {
     hero: {
-      title: "PT. ARGA TEKNOLOGI HANDAL",
-      description: "We are leaders in the construction and information technology industry, committed to providing the best solutions for our clients' needs. With extensive experience in various fields, we are ready to help you achieve your project goals.",
-      cta: "Contact Us"
+      badge: "Let's Build the Future Together!",
+      title: "Empowering Your Vision with Reliable Technology Solutions",
+      description: "At PT. ARGA TEKNOLOGI HANDAL, we transform ideas into reality through innovative construction and technology services. With a commitment to excellence and a passion for quality, we deliver tailored solutions that meet your unique needs.",
+      cta: "Let's talk",
     },
     about: {
       title: "Vision & Mission",
@@ -127,12 +149,26 @@ export const content = {
           location: "South Jakarta and surrounding areas"
         }
       ]
+    },
+    floating: {
+      contactUs: "Contact Us",
+      specialMessage: "Special Message",
+      form: {
+        title: "Special Message Form",
+        name: "Name",
+        namePlaceholder: "Enter your name",
+        email: "Email",
+        emailPlaceholder: "Enter your email",
+        message: "Message",
+        messagePlaceholder: "Write your message",
+        submit: "Send via WhatsApp"
+      }
+    },
+    navbar: {
+      home: "Home",
+      about: "About",
+      services: "Services",
+      contact: "Contact"
     }
-  },
-  navbar: {
-    home: "Beranda",
-    about: "Tentang",
-    services: "Layanan",
-    contact: "Kontak"
   }
 } 

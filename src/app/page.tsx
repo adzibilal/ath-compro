@@ -5,6 +5,7 @@ import Projects from '@/components/Projects'
 import Footer from '@/components/Footer'
 import SplashScreen from '@/components/SplashScreen'
 import Navbar from '@/components/Navbar'
+import FloatingButton from '@/components/FloatingButton'
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Values />
       <Projects />
       <Footer />
+      <FloatingButton />
     </main>
   )
 }

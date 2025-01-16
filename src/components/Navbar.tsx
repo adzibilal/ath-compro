@@ -1,13 +1,17 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { useLanguage } from "@/context/LanguageContext";
-import Link from "next/link";
+import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { useLanguage } from "@/context/LanguageContext";
+import { content } from "@/translations/content";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { language } = useLanguage();
+  const t = content[language].navbar;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,20 +47,100 @@ export default function Navbar() {
             />
           </Link>
 
-          {/* Menu Items */}
-          <div className="hidden md:flex space-x-8">
+          {/* Desktop Menu */}
+          <div className="hidden md:flex space-x-8 items-center">
             <a href="#home" className="hover:opacity-75 transition">
-              Beranda
+              {t.home}
             </a>
             <a href="#about" className="hover:opacity-75 transition">
-              Tentang
+              {t.about}
             </a>
             <a href="#services" className="hover:opacity-75 transition">
-              Layanan
+              {t.services}
             </a>
             <a href="#contact" className="hover:opacity-75 transition">
-              Kontak
+              {t.contact}
             </a>
+            <LanguageSwitcher />
+          </div>
+
+          {/* Hamburger Button */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden p-2 focus:outline-none"
+          >
+            <div className="w-6 flex flex-col gap-1">
+              <span
+                className={`block h-0.5 w-6 rounded-sm transition-all duration-300 ${
+                  isScrolled ? "bg-primary-green" : "bg-white"
+                } ${
+                  isMenuOpen
+                    ? "translate-y-1.5 rotate-45"
+                    : ""
+                }`}
+              ></span>
+              <span
+                className={`block h-0.5 w-6 rounded-sm transition-all duration-300 ${
+                  isScrolled ? "bg-primary-green" : "bg-white"
+                } ${
+                  isMenuOpen
+                    ? "opacity-0"
+                    : "opacity-100"
+                }`}
+              ></span>
+              <span
+                className={`block h-0.5 w-6 rounded-sm transition-all duration-300 ${
+                  isScrolled ? "bg-primary-green" : "bg-white"
+                } ${
+                  isMenuOpen
+                    ? "-translate-y-1.5 -rotate-45"
+                    : ""
+                }`}
+              ></span>
+            </div>
+          </button>
+        </div>
+
+        {/* Mobile Menu */}
+        <div
+          className={`md:hidden transition-all duration-300 overflow-hidden ${
+            isMenuOpen ? "max-h-60" : "max-h-0"
+          }`}
+        >
+          <div className={`flex flex-col space-y-4 pb-6 ${
+            isScrolled ? "text-primary-green" : "text-white"
+          }`}>
+            <a
+              href="#home"
+              className="hover:opacity-75 transition"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {t.home}
+            </a>
+            <a
+              href="#about"
+              className="hover:opacity-75 transition"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {t.about}
+            </a>
+            <a
+              href="#services"
+              className="hover:opacity-75 transition"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {t.services}
+            </a>
+            <a
+              href="#contact"
+              className="hover:opacity-75 transition"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {t.contact}
+            </a>
+            <div className="pt-2">
+              <LanguageSwitcher />
+            </div>
           </div>
         </div>
       </div>

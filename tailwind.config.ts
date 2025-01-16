@@ -14,7 +14,8 @@ export default {
         primary: {
           orange: '#f58c1e',
           green: '#019345',
-          DEFAULT: '#f58c1e'  // warna default ketika menggunakan 'primary'
+          DEFAULT: '#f58c1e',
+          purple: '#8B3DFF',
         }
       },
     },
