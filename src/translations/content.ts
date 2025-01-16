@@ -2,7 +2,7 @@ export const content = {
   id: {
     hero: {
       title: "PT. ARGA TEKNOLOGI HANDAL",
-      description: "Kami adalah pemimpin di industri konstruksi dan teknologi informasi, berkomitmen untuk memberikan solusi terbaik bagi kebutuhan klien kami. Dengan pengalaman luas di berbagai bidang, kami siap membantu Anda mencapai tujuan proyek Anda.",
+      description: "Kami adalah pemimpin di industri konstruksi dan teknologi informasi, berkomitmen untuk memberikan solusi terbaik bagi kebutuhan klien kami. Dengan pengalaman yang luas di berbagai bidang, kami siap membantu Anda mencapai tujuan proyek Anda.",
       cta: "Hubungi Kami"
     },
     about: {
@@ -86,7 +86,7 @@ export const content = {
       items: [
         {
           title: "Smart Work",
-          description: "We encourage all employees to work smarter and faster, promoting innovation and efficiency."
+          description: "We encourage all employees to work smarter and faster, prioritizing innovation and efficiency."
         },
         {
           title: "Caring",
@@ -128,5 +128,11 @@ export const content = {
         }
       ]
     }
+  },
+  navbar: {
+    home: "Beranda",
+    about: "Tentang",
+    services: "Layanan",
+    contact: "Kontak"
   }
 } 

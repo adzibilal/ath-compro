@@ -19,3 +19,25 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Language Selector Custom Styles */
+.react-flags-select-module {
+  @apply text-sm;
+}
+
+/* Override default styles */
+.react-flags-select .flag-select__btn {
+  @apply border-0 bg-transparent;
+}
+
+.react-flags-select .flag-select__options {
+  @apply mt-1 border border-gray-100 shadow-lg rounded-md;
+}
+
+.react-flags-select .flag-select__option {
+  @apply hover:bg-gray-50;
+}
+
+.react-flags-select .flag-select__option--selected {
+  @apply bg-gray-50;
+}

@@ -11,6 +11,11 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primary: {
+          orange: '#f58c1e',
+          green: '#019345',
+          DEFAULT: '#f58c1e'  // warna default ketika menggunakan 'primary'
+        }
       },
     },
   },

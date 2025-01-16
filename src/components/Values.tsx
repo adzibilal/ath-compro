@@ -29,7 +29,7 @@ export default function Values() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {values.map((value, index) => (
             <div key={index} className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-4 text-blue-600">{value.title}</h3>
+              <h3 className="text-xl font-bold mb-4 text-primary-green">{value.title}</h3>
               <p className="text-gray-600">{value.description}</p>
             </div>
           ))}

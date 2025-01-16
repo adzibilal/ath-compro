@@ -3,12 +3,14 @@ import About from '@/components/About'
 import Values from '@/components/Values'
 import Projects from '@/components/Projects'
 import Footer from '@/components/Footer'
-import LanguageSwitcher from '@/components/LanguageSwitcher'
+import SplashScreen from '@/components/SplashScreen'
+import Navbar from '@/components/Navbar'
 
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <LanguageSwitcher />
+      <SplashScreen />
+      <Navbar />
       <Hero />
       <About />
       <Values />
