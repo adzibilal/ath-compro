@@ -19,8 +19,6 @@ export default function ContactUs() {
   }
 
   return (
-    <>
-      <Navbar listenScroll={false} />
       <div className="min-h-screen py-20 bg-gray-50 mt-20">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto">
@@ -78,6 +76,5 @@ export default function ContactUs() {
           </div>
         </div>
       </div>
-    </>
   )
 } 
