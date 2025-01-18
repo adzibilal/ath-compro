@@ -6,6 +6,8 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules'
 import { Project, projects } from '@/utils/projectsData'
 import ProjectModal from '@/components/ProjectModal'
 import Navbar from '@/components/Navbar'
+import { useLanguage } from '@/context/LanguageContext'
+import { content } from '@/translations/content'
 
 // Import Swiper styles
 import 'swiper/css'
@@ -13,6 +15,8 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 
 export default function ProjectsPage() {
+  const { language } = useLanguage()
+  const t = content[language].projectsPage
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [mounted, setMounted] = useState(false)
@@ -50,8 +54,8 @@ export default function ProjectsPage() {
           </video>
           <div className="absolute inset-0 bg-black/60"></div>
           <div className="relative z-10 text-center text-white">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Proyek Kami</h1>
-            <p className="text-lg md:text-xl">Portofolio proyek yang telah kami kerjakan</p>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">{t.title}</h1>
+            <p className="text-lg md:text-xl">{t.subtitle}</p>
           </div>
         </section>
 
@@ -96,14 +100,20 @@ export default function ProjectsPage() {
                   </div>
                   <div className="p-6">
                     <h3 className="text-xl font-bold mb-4 text-primary-green">{project.title}</h3>
-                    <p className="text-gray-600 mb-2"><span className="font-semibold">Klien:</span> {project.client}</p>
-                    <p className="text-gray-600 mb-2"><span className="font-semibold">Lokasi:</span> {project.location}</p>
-                    <p className="text-gray-600 mb-4"><span className="font-semibold">Scope:</span> {project.scope}</p>
+                    <p className="text-gray-600 mb-2">
+                      <span className="font-semibold">{t.client}:</span> {project.client}
+                    </p>
+                    <p className="text-gray-600 mb-2">
+                      <span className="font-semibold">{t.location}:</span> {project.location}
+                    </p>
+                    <p className="text-gray-600 mb-4">
+                      <span className="font-semibold">{t.scope}:</span> {project.scope}
+                    </p>
                     <button
                       onClick={() => openModal(project)}
                       className="w-full bg-primary-green text-white py-2 rounded-lg hover:bg-opacity-90 transition-colors duration-200"
                     >
-                      Lihat Galeri
+                      {t.viewGallery}
                     </button>
                   </div>
                 </div>

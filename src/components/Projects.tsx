@@ -6,6 +6,8 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules'
 import Link from 'next/link'
 import { Project, projects } from '@/utils/projectsData'
 import ProjectModal from './ProjectModal'
+import { useLanguage } from '@/context/LanguageContext'
+import { content } from '@/translations/content'
 
 // Import Swiper styles
 import 'swiper/css'
@@ -13,6 +15,7 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 
 export default function Projects() {
+  const { language } = useLanguage()
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [mounted, setMounted] = useState(false)
@@ -76,13 +79,17 @@ export default function Projects() {
           </div>
           <div className="p-6">
             <h3 className="text-xl font-bold mb-4 text-primary-green">{project.title}</h3>
-            <p className="text-gray-600 mb-2"><span className="font-semibold">Klien:</span> {project.client}</p>
-            <p className="text-gray-600 mb-4"><span className="font-semibold">Lokasi:</span> {project.location}</p>
+            <p className="text-gray-600 mb-2">
+              <span className="font-semibold">{content[language].projects.client}:</span> {project.client}
+            </p>
+            <p className="text-gray-600 mb-4">
+              <span className="font-semibold">{content[language].projects.location}:</span> {project.location}
+            </p>
             <button
               onClick={() => openModal(project)}
               className="w-full bg-primary-green text-white py-2 rounded-lg hover:bg-opacity-90 transition-colors duration-200"
             >
-              Lihat Galeri
+              {language === 'id' ? 'Lihat Galeri' : 'View Gallery'}
             </button>
           </div>
         </div>
@@ -93,14 +100,14 @@ export default function Projects() {
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">Pengalaman Proyek</h2>
+        <h2 className="text-3xl font-bold text-center mb-12">{content[language].projects.title}</h2>
         {renderContent()}
         <div className="mt-12 text-center">
           <Link 
             href="/projects" 
             className="inline-block bg-primary-orange text-white px-8 py-3 rounded-lg hover:bg-opacity-90 transition-colors duration-200"
           >
-            Lihat Semua Proyek
+            {language === 'id' ? 'Lihat Semua Proyek' : 'View All Projects'}
           </Link>
         </div>
       </div>

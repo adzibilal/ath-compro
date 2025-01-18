@@ -82,7 +82,16 @@ export const content = {
       home: "Beranda",
       about: "Tentang",
       services: "Layanan",
-      contact: "Kontak"
+      contact: "Kontak",
+      projects: "Proyek"
+    },
+    projectsPage: {
+      title: "Proyek Kami",
+      subtitle: "Portofolio proyek yang telah kami kerjakan",
+      client: "Klien",
+      location: "Lokasi",
+      scope: "Lingkup",
+      viewGallery: "Lihat Galeri"
     }
   },
   en: {
@@ -168,7 +177,16 @@ export const content = {
       home: "Home",
       about: "About",
       services: "Services",
-      contact: "Contact"
+      contact: "Contact",
+      projects: "Projects"
+    },
+    projectsPage: {
+      title: "Our Projects",
+      subtitle: "Portfolio of projects we have worked on",
+      client: "Client",
+      location: "Location",
+      scope: "Scope",
+      viewGallery: "View Gallery"
     }
   }
 } 

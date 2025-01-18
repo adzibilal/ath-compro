@@ -3,6 +3,8 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination, Autoplay } from 'swiper/modules'
 import { Project } from '@/utils/projectsData'
+import { useLanguage } from '@/context/LanguageContext'
+import { content } from '@/translations/content'
 
 interface ProjectModalProps {
   project: Project | null
@@ -11,6 +13,9 @@ interface ProjectModalProps {
 }
 
 export default function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
+  const { language } = useLanguage()
+  const t = content[language].projectsPage
+
   if (!project) return null
 
   return (
@@ -53,9 +58,15 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
           </div>
           <div className="p-6">
             <h3 className="text-2xl font-bold mb-4 text-primary-green">{project.title}</h3>
-            <p className="text-gray-600 mb-2"><span className="font-semibold">Klien:</span> {project.client}</p>
-            <p className="text-gray-600"><span className="font-semibold">Lokasi:</span> {project.location}</p>
-            <p className="text-gray-600"><span className="font-semibold">Scope:</span> {project.scope}</p>
+            <p className="text-gray-600 mb-2">
+              <span className="font-semibold">{t.client}:</span> {project.client}
+            </p>
+            <p className="text-gray-600">
+              <span className="font-semibold">{t.location}:</span> {project.location}
+            </p>
+            <p className="text-gray-600">
+              <span className="font-semibold">{t.scope}:</span> {project.scope}
+            </p>
           </div>
         </div>
       </div>

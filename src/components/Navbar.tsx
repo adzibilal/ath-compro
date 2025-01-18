@@ -59,7 +59,7 @@ export default function Navbar({ listenScroll = true }: NavbarProps) {
               {t.home}
             </a>
             <Link href="/projects" className="hover:opacity-75 transition">
-              Projects
+              {t.projects}
             </Link>
             <a href="/contact-us" className="hover:opacity-75 transition">
               {t.contact}
@@ -125,7 +125,7 @@ export default function Navbar({ listenScroll = true }: NavbarProps) {
               className="hover:opacity-75 transition"
               onClick={() => setIsMenuOpen(false)}
             >
-              Projects
+              {t.projects}
             </Link>
             <a
               href="/contact-us"
