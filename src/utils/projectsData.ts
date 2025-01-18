@@ -93,6 +93,18 @@ export const projects: Project[] = [
     ],
   },
   {
+    title: " MAINTENANCE CCTV & JARINGAN KABEL INTERNET GEDUNG DEN",
+    client: "SETJEN DEWAN ENERGI NASIONAL",
+    location: "JAKARTA",
+    scope: "MAINTENANCE CCTV & JARINGAN KABEL INTERNET",
+    images: [
+        "https://res.cloudinary.com/dfzjkdczw/image/upload/v1737210632/argatek/10.%20MAINTENANCE%20CCTV%20AND%20JARINGAN%20KABEL%20SETJEN%20DEN/2023-05-31_11.15.05_a7wtpw.jpg",
+        "https://res.cloudinary.com/dfzjkdczw/image/upload/v1737210633/argatek/10.%20MAINTENANCE%20CCTV%20AND%20JARINGAN%20KABEL%20SETJEN%20DEN/2023-05-31_14.49.23_lti7ut.jpg",
+        "https://res.cloudinary.com/dfzjkdczw/image/upload/v1737210637/argatek/10.%20MAINTENANCE%20CCTV%20AND%20JARINGAN%20KABEL%20SETJEN%20DEN/2023-05-31_11.56.48_msm8gm.jpg",
+        "https://res.cloudinary.com/dfzjkdczw/image/upload/v1737210644/argatek/10.%20MAINTENANCE%20CCTV%20AND%20JARINGAN%20KABEL%20SETJEN%20DEN/2023-05-31_13.03.31_kkhn3l.jpg",
+    ],
+  },
+  {
     title: "  INSTALASI FO BACKBONE KARAWANG - CIKAMPEK",
     client: "PT. CENDIKIA GLOBAL SOLUSI",
     location: "KARAWANG - CIKAMPEK",
@@ -102,6 +114,18 @@ export const projects: Project[] = [
       "https://res.cloudinary.com/dfzjkdczw/image/upload/v1737176545/argatek/11.%20INSTALASI%20BACKBONE%20FO%20KARAWANG-CIKAMPEK/kiwohsuqnegqzmudljuj.jpg",
       "https://res.cloudinary.com/dfzjkdczw/image/upload/v1737176545/argatek/11.%20INSTALASI%20BACKBONE%20FO%20KARAWANG-CIKAMPEK/xum6xzdu0txkdaui4gqw.jpg",
       "https://res.cloudinary.com/dfzjkdczw/image/upload/v1737176545/argatek/11.%20INSTALASI%20BACKBONE%20FO%20KARAWANG-CIKAMPEK/mxaclxo0nw74j0bmvdzf.jpg",
+    ],
+  },
+  {
+    title: "INSTALASI CCTV & JARINGAN KABEL INTERNET RUDIN SETJEN DEN",
+    client: "SETJEN DEWAN ENERGI NASIONAL",
+    location: "JAKARTA",
+    scope: "INSTALASI CCTV & JARINGAN KABEL INTERNET",
+    images: [
+        "https://res.cloudinary.com/dfzjkdczw/image/upload/v1737210642/argatek/12.%20INSTALASI%20CCTV%20AND%20JARINGAN%20KABEL%20INTERNET%20RUDIN%20SETJEN%20DEN/telegram-cloud-photo-size-5-6181317263571925054-y_r0mi6e.jpg",
+        "https://res.cloudinary.com/dfzjkdczw/image/upload/v1737210640/argatek/12.%20INSTALASI%20CCTV%20AND%20JARINGAN%20KABEL%20INTERNET%20RUDIN%20SETJEN%20DEN/telegram-cloud-photo-size-5-6181317263571925056-y_pk76gf.jpg",
+        "https://res.cloudinary.com/dfzjkdczw/image/upload/v1737210639/argatek/12.%20INSTALASI%20CCTV%20AND%20JARINGAN%20KABEL%20INTERNET%20RUDIN%20SETJEN%20DEN/telegram-cloud-photo-size-5-6181317263571925059-y_sm7jk5.jpg",
+        "https://res.cloudinary.com/dfzjkdczw/image/upload/v1737210635/argatek/12.%20INSTALASI%20CCTV%20AND%20JARINGAN%20KABEL%20INTERNET%20RUDIN%20SETJEN%20DEN/telegram-cloud-photo-size-5-6181317263571925055-y_puasuf.jpg",
     ],
   },
   {
@@ -194,6 +218,19 @@ export const projects: Project[] = [
       "https://res.cloudinary.com/dfzjkdczw/image/upload/v1737176551/argatek/20.%20AKTIVASI%20LINK%20FO%20GEDUNG%20SARANA%20MUKTI%20ADIJAYA%20CIKARANG/fxta801akmelyzqqieil.jpg",
       "https://res.cloudinary.com/dfzjkdczw/image/upload/v1737176551/argatek/20.%20AKTIVASI%20LINK%20FO%20GEDUNG%20SARANA%20MUKTI%20ADIJAYA%20CIKARANG/jotjx2onmmuf8i7irhka.jpg",
       "https://res.cloudinary.com/dfzjkdczw/image/upload/v1737176551/argatek/20.%20AKTIVASI%20LINK%20FO%20GEDUNG%20SARANA%20MUKTI%20ADIJAYA%20CIKARANG/esleeumpdisdbknowzyc.jpg",
+    ],
+  },
+  {
+    title: "INSTALASI FO BACKBONE & FISHBONE CCTV TANGERANG",
+    client: "PT. CENDIKIA GLOBAL SOLUSI",
+    location: "TANGERANG - BANTEN",
+    scope: "OUT SIDE PLANT FIBER OPTIC (OSP-FO)",
+    images: [
+      "https://res.cloudinary.com/dfzjkdczw/image/upload/v1737210598/argatek/21.%20INSTALASI%20FO%20BACKBONE%20AND%20FISHBONE%20CCTV%20TANGERANG/3_mbydqy.jpg",
+      "https://res.cloudinary.com/dfzjkdczw/image/upload/v1737210602/argatek/21.%20INSTALASI%20FO%20BACKBONE%20AND%20FISHBONE%20CCTV%20TANGERANG/4_ucngh0.jpg",
+      "https://res.cloudinary.com/dfzjkdczw/image/upload/v1737210603/argatek/21.%20INSTALASI%20FO%20BACKBONE%20AND%20FISHBONE%20CCTV%20TANGERANG/5_pxadvw.jpg",
+      "https://res.cloudinary.com/dfzjkdczw/image/upload/v1737210601/argatek/21.%20INSTALASI%20FO%20BACKBONE%20AND%20FISHBONE%20CCTV%20TANGERANG/2_avtdoz.jpg",
+      "https://res.cloudinary.com/dfzjkdczw/image/upload/v1737210597/argatek/21.%20INSTALASI%20FO%20BACKBONE%20AND%20FISHBONE%20CCTV%20TANGERANG/1_wr0ytq.jpg"
     ],
   },
   {

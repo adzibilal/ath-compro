@@ -104,7 +104,7 @@ export default function Footer() {
               <p className="text-gray-400">
                 Pulomas Office Park
                 <br />
-                Building II, 2nd Floor
+                Building 4, 2nd Floor
                 <br />
                 Jl. Jend. Ahmad Yani No.2
                 <br />
