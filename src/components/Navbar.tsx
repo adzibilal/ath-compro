@@ -7,24 +7,30 @@ import { useLanguage } from "@/context/LanguageContext";
 import { content } from "@/translations/content";
 import LanguageSwitcher from "./LanguageSwitcher";
 
-export default function Navbar() {
+interface NavbarProps {
+  listenScroll?: boolean;
+}
+
+export default function Navbar({ listenScroll = true }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { language } = useLanguage();
   const t = content[language].navbar;
 
   useEffect(() => {
+    if (!listenScroll) {
+      setIsScrolled(true);
+      return;
+    }
+
     const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      const scrollPosition = window.scrollY;
+      setIsScrolled(scrollPosition > 0);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [listenScroll]);
 
   return (
     <nav
@@ -49,16 +55,13 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8 items-center">
-            <a href="#home" className="hover:opacity-75 transition">
+            <a href="/" className="hover:opacity-75 transition">
               {t.home}
             </a>
-            <a href="#about" className="hover:opacity-75 transition">
-              {t.about}
-            </a>
-            <a href="#services" className="hover:opacity-75 transition">
-              {t.services}
-            </a>
-            <a href="#contact" className="hover:opacity-75 transition">
+            <Link href="/projects" className="hover:opacity-75 transition">
+              Projects
+            </Link>
+            <a href="/contact-us" className="hover:opacity-75 transition">
               {t.contact}
             </a>
             <LanguageSwitcher />
@@ -111,28 +114,21 @@ export default function Navbar() {
             isScrolled ? "text-primary-green" : "text-white"
           }`}>
             <a
-              href="#home"
+              href="/"
               className="hover:opacity-75 transition"
               onClick={() => setIsMenuOpen(false)}
             >
               {t.home}
             </a>
-            <a
-              href="#about"
+            <Link
+              href="/projects"
               className="hover:opacity-75 transition"
               onClick={() => setIsMenuOpen(false)}
             >
-              {t.about}
-            </a>
+              Projects
+            </Link>
             <a
-              href="#services"
-              className="hover:opacity-75 transition"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              {t.services}
-            </a>
-            <a
-              href="#contact"
+              href="/contact-us"
               className="hover:opacity-75 transition"
               onClick={() => setIsMenuOpen(false)}
             >
