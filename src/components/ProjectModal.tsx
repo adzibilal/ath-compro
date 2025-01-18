@@ -20,7 +20,7 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
 
   return (
     <div className={`fixed inset-0 z-50 flex items-center justify-center ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'} transition-opacity duration-300`}>
-      <div className="absolute inset-0 bg-black bg-opacity-75" onClick={onClose}></div>
+      <div className="absolute inset-0 bg-black/25" onClick={onClose}></div>
       <div className="relative w-full max-w-4xl p-4 mx-4">
         <button 
           onClick={onClose}
@@ -31,7 +31,7 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
           </svg>
         </button>
         <div className="bg-white rounded-lg overflow-hidden">
-          <div className="h-[70vh]">
+          <div className="h-[50vh] md:h-[50vh]">
             <Swiper
               modules={[Navigation, Pagination, Autoplay]}
               navigation={true}
