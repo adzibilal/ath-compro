@@ -92,6 +92,15 @@ export const content = {
       location: "Lokasi",
       scope: "Lingkup",
       viewGallery: "Lihat Galeri"
+    },
+    footer: {
+      description: "PT. Arga Teknologi Handal adalah perusahaan yang bergerak di bidang konstruksi dan teknologi, menyediakan solusi terpercaya untuk kebutuhan Anda.",
+      quickLinks: "Menu Cepat",
+      home: "Beranda",
+      projects: "Proyek",
+      contact: "Kontak",
+      address: "Alamat",
+      copyright: "Hak Cipta Dilindungi."
     }
   },
   en: {
@@ -187,6 +196,15 @@ export const content = {
       location: "Location",
       scope: "Scope",
       viewGallery: "View Gallery"
+    },
+    footer: {
+      description: "PT. Arga Teknologi Handal is a company engaged in construction and technology, providing reliable solutions for your needs.",
+      quickLinks: "Quick Links",
+      home: "Home",
+      projects: "Projects",
+      contact: "Contact",
+      address: "Address",
+      copyright: "All Rights Reserved."
     }
   }
 } 

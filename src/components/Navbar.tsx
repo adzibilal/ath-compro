@@ -6,19 +6,19 @@ import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 import { content } from "@/translations/content";
 import LanguageSwitcher from "./LanguageSwitcher";
+import { usePathname } from "next/navigation";
 
-interface NavbarProps {
-  listenScroll?: boolean;
-}
-
-export default function Navbar({ listenScroll = true }: NavbarProps) {
+export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { language } = useLanguage();
   const t = content[language].navbar;
+  const pathname = usePathname();
+
+  const shouldListenScroll = !["/projects", "/contact-us"].includes(pathname);
 
   useEffect(() => {
-    if (!listenScroll) {
+    if (!shouldListenScroll) {
       setIsScrolled(true);
       return;
     }
@@ -30,7 +30,7 @@ export default function Navbar({ listenScroll = true }: NavbarProps) {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [listenScroll]);
+  }, [shouldListenScroll]);
 
   return (
     <nav
@@ -55,15 +55,15 @@ export default function Navbar({ listenScroll = true }: NavbarProps) {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8 items-center">
-            <a href="/" className="hover:opacity-75 transition">
+            <Link href="/" className="hover:opacity-75 transition">
               {t.home}
-            </a>
+            </Link>
             <Link href="/projects" className="hover:opacity-75 transition">
               {t.projects}
             </Link>
-            <a href="/contact-us" className="hover:opacity-75 transition">
+            <Link href="/contact-us" className="hover:opacity-75 transition">
               {t.contact}
-            </a>
+            </Link>
             <LanguageSwitcher />
           </div>
 
@@ -113,13 +113,13 @@ export default function Navbar({ listenScroll = true }: NavbarProps) {
           <div className={`flex flex-col space-y-4 pb-6 ${
             isScrolled ? "text-primary-green" : "text-white"
           }`}>
-            <a
+            <Link
               href="/"
               className="hover:opacity-75 transition"
               onClick={() => setIsMenuOpen(false)}
             >
               {t.home}
-            </a>
+            </Link>
             <Link
               href="/projects"
               className="hover:opacity-75 transition"
@@ -127,13 +127,13 @@ export default function Navbar({ listenScroll = true }: NavbarProps) {
             >
               {t.projects}
             </Link>
-            <a
+            <Link
               href="/contact-us"
               className="hover:opacity-75 transition"
               onClick={() => setIsMenuOpen(false)}
             >
               {t.contact}
-            </a>
+            </Link>
             <div className="pt-2">
               <LanguageSwitcher />
             </div>
