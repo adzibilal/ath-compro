@@ -13,7 +13,7 @@ export default function Home() {
       <SplashScreen />
       <Navbar />
       <Hero />
-      {/* <About /> */}
+      <About />
       <Values />
       <Projects />
       <FloatingButton />

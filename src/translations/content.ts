@@ -7,14 +7,18 @@ export const content = {
       cta: "Hubungi Kami",
     },
     about: {
-      title: "Visi & Misi",
-      vision: {
-        title: "Visi",
-        description: "Menjadi mitra terpercaya dalam menyediakan solusi konstruksi dan teknologi yang inovatif dan berkualitas tinggi."
-      },
-      mission: {
-        title: "Misi",
-        description: "Memberikan layanan unggulan dengan mengutamakan kualitas, inovasi, dan teknologi yang handal."
+      title: "Tentang Kami",
+      profiles: {
+        ceo: {
+          quote: "Kami berkomitmen memberikan solusi terbaik dengan tenaga-tenaga muda profesional dan berkualitas",
+          name: "Ir. Agustinus Hutabarat",
+          position: "CEO"
+        },
+        coo: {
+          quote: "Kami berkolaborasi memberikan yang terbaik dalam mencapai tujuan bersama",
+          name: "Aditya Kusuma, S.Kom",
+          position: "COO"
+        }
       }
     },
     values: {
@@ -111,14 +115,18 @@ export const content = {
       cta: "Let's talk",
     },
     about: {
-      title: "Vision & Mission",
-      vision: {
-        title: "Vision",
-        description: "To be a trusted partner in providing innovative and high-quality construction and technology solutions."
-      },
-      mission: {
-        title: "Mission",
-        description: "To deliver superior services by prioritizing quality, innovation, and reliable technology."
+      title: "About Us",
+      profiles: {
+        ceo: {
+          quote: "We are committed to providing the best solutions with professional and qualified young talents",
+          name: "Ir. Agustinus Hutabarat",
+          position: "CEO"
+        },
+        coo: {
+          quote: "We collaborate to deliver excellence in achieving our shared goals",
+          name: "Aditya Kusuma, S.Kom",
+          position: "COO"
+        }
       }
     },
     values: {
